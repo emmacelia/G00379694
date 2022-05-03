@@ -1,5 +1,7 @@
 {
   "name": "ionic-tourism-app",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

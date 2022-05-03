@@ -1,17 +1,56 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 3
+    <ion-title color="danger">
+      Top Sights
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-content [fullscreen]="true">
+  
+    <ion-slides [options]="{slidesPerView: true, loop: true }">
+      <ion-slide>
+        <div>
+          <ion-img src="assets/img/spanisharch.jpg"> 
+          </ion-img>
+          <p>Positioned on the left bank of the Corrib River, 
+              The Spanish Arch was built in 
+             1584 but is an extension of the 12th century Norman 
+             -built town wall, which 
+             stretched from Martin's Tower to the riverbank.</p>
+             <ion-button color="translucent" (click)="openPage()">Visit</ion-button>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+          
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div>
+          <ion-img src="assets/img/salthill.jpg"> 
+          </ion-img>
+          <p>Salthill is an affluent suburb of Galway City,
+             less than 3km from the city centre and so is also easily accessible
+              by walking or cycling along the promenade which starts at 
+              The Claddagh.</p>
+          <ion-button color="translucent" (click)="OpenSalt()">Visit</ion-button>
+          
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div>
+          <ion-img src="assets/img/Cat.jpg"> 
+          </ion-img>
+          <p>The Cathedral of Our Lady Assumed into Heaven and St Nicholas,
+             commonly known as Galway Cathedral, 
+             is a Roman Catholic cathedral in Galway,</p>
+             <ion-button color="translucent" (click)="OpenCat()">Visit</ion-button>
+
+          
+        </div>
+
+
+      </ion-slide>
+    </ion-slides>
+  
+
+  
 </ion-content>

@@ -1,17 +1,143 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Resturaunt Reviews
+      
     </ion-title>
   </ion-toolbar>
 </ion-header>
+My status is {{myStatus}}
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<div> Resturaunt 2 is {{Resturaunt2}}</div>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
-</ion-content>
+
+<div> Resturaunt 3 is {{Resturaunt3}} </div>
+
+<ion-content>
+<ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>1.</ion-card-subtitle>
+    <ion-card-title> Dough bros</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-img src="assets/img/d.jpg"> </ion-img>
+    
+    <ion-list>
+      <ion-radio-group [(ngModel)]="myStatus">
+        <ion-list-header>
+          <ion-label>Would you go back? {{myStatus}}</ion-label>
+        </ion-list-header>
+    
+        <ion-item>
+          <ion-label>Yes</ion-label>
+          <ion-radio slot="start" value="Yes"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>No</ion-label>
+          <ion-radio slot="start" value="No"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Maybe</ion-label>
+          <ion-radio slot="start" value="Maybe"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+
+
+    <ion-button color="translucent" (click)="SaveStatus()">Save Choice</ion-button>
+  </ion-card-content>
+
+ 
+<!--Put past reviews in here below-->
+
+
+</ion-card>
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>2.</ion-card-subtitle>
+    <ion-card-title> Bo Town</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-img src="assets/img/BO.jpg"> </ion-img>
+    
+    <ion-list>
+      <ion-radio-group [(ngModel)]="Resturaunt2">
+        <ion-list-header>
+          <ion-label>Would you go back? {{Resturaunt2}}</ion-label>
+        </ion-list-header>
+    
+        <ion-item>
+          <ion-label>Yes</ion-label>
+          <ion-radio slot="start" value="Yes"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>No</ion-label>
+          <ion-radio slot="start" value="No"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Maybe</ion-label>
+          <ion-radio slot="start" value="Maybe"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+
+
+    <ion-button color="translucent" (click)="SaveResturaunt2()">Save Choice</ion-button>
+  </ion-card-content>
+
+ 
+<!--Put past reviews in here below-->
+
+
+</ion-card>
+
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>3.</ion-card-subtitle>
+    <ion-card-title> Handsome Burger</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-img src="assets/img/Hand.jpg"> </ion-img>
+    
+    <ion-list>
+      <ion-radio-group [(ngModel)]="Resturaunt3">
+        <ion-list-header>
+          <ion-label>Would you go back? {{Resturaunt3}}</ion-label>
+        </ion-list-header>
+    
+        <ion-item>
+          <ion-label>Yes</ion-label>
+          <ion-radio slot="start" value="Yes"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>No</ion-label>
+          <ion-radio slot="start" value="No"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Maybe</ion-label>
+          <ion-radio slot="start" value="Maybe"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+
+
+    <ion-button color="translucent" (click)="SaveResturaunt3()">Save Choice</ion-button>
+  </ion-card-content>
+
+ 
+<!--Put past reviews in here below-->
+
+
+</ion-card>
+
