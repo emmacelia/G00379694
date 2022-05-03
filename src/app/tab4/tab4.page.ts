@@ -15,11 +15,13 @@ export class Tab4Page implements OnInit {
 
   constructor(private service: ServicesService) { }
 
-  WeatherData: any = [];
+  WeatherData: any;
 
   ngOnInit() {
+    
     this.service.GetWeatherData().subscribe(data => {
-      this.WeatherData = data.WeatherData;
+      console.log(data);
+      this.WeatherData = data;
     });
 
   }

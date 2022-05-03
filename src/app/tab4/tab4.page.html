@@ -6,7 +6,21 @@
   </ion-toolbar>
 </ion-header>
 
-Todays Weather:
+  <h1>Weather in Galway</h1> 
 
-  <h1>Weather in Galway</h1>
-{{WeatherData[0].main}}, {{WeatherData[0].description}}
+<div *ngIf="WeatherData != undefined">  
+
+  <div>
+    {{WeatherData.weather[0].main}}
+  </div>
+  <div>
+      {{WeatherData.base}}
+  </div>
+  <div>
+      {{WeatherData.main.temp}}
+  </div>
+  <div>
+      {{WeatherData.wind.speed}}
+  </div>
+
+</div>
