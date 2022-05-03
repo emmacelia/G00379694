@@ -7,10 +7,10 @@ import { ServicesService } from './services.service';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-
-  constructor() {}
-
   weather:any = [];
+  constructor() {}
+  
+  
 
  
     
