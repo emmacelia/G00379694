@@ -1,26 +1,42 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Weather In Galway
+     Todays Weather
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-  <h1>Weather in Galway</h1> 
 
 <div *ngIf="WeatherData != undefined">  
 
-  <div>
-    {{WeatherData.weather[0].main}}
+  <ion-img src="assets/img/wg.jpg"> </ion-img>
+  <ion-list>
+
+
+    <ion-item>
+    <div>
+       <h2>>  Forcast  :  {{WeatherData.weather[0].main}} </h2> 
+     </div>
+    </ion-item>
+
+
+    <ion-item>
+ <div>
+    <h2> > Base   :    {{WeatherData.base}}</h2>  
   </div>
-  <div>
-      {{WeatherData.base}}
-  </div>
-  <div>
-      {{WeatherData.main.temp}}
-  </div>
-  <div>
-      {{WeatherData.wind.speed}}
+    </ion-item>
+<div>
+    <h2>> Temperature :{{WeatherData.main.temp}} </h2>
+      
   </div>
 
-</div>
+    <ion-item>
+      <div>
+        <h2> > Wind Speed  :   {{WeatherData.wind.speed}}</h2>
+           
+       </div>
+     
+    </ion-item>
+
+  </ion-list>
+
