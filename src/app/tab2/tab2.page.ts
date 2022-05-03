@@ -6,11 +6,15 @@ import { Storage } from '@ionic/storage-angular';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page implements OnInit {
+//string arrays to store the values of the resturaunt reviews
 myStatus:string = "";
 Resturaunt2:string = "";
 Resturaunt3:string = "";
+
+//we need to call the storage in a constructor to use it 
   constructor(private storage: Storage) {}
 
+//this method allows us to reload the saved data 
 ionViewDidEnter(){
 
   this.storage.create()
@@ -50,7 +54,7 @@ ionViewDidEnter(){
 ngOnInit(){
 
 }
- 
+//Method to save the data of the first resturaunt 
 SaveStatus(){
 this.storage.create()
 .then(()=>{
@@ -62,7 +66,7 @@ this.storage.create()
 }
 
 
-
+//Method to save the data of the second resturaunt 
 SaveResturaunt2(){
   this.storage.create()
   .then(()=>{
@@ -73,7 +77,7 @@ SaveResturaunt2(){
   .catch();
   }
 
-
+//Method to save the data of the third resturaunt 
   SaveResturaunt3(){
     this.storage.create()
     .then(()=>{

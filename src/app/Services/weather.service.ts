@@ -9,9 +9,5 @@ export class WeatherService {
 baseURL = "https://https://www.weatherapi.com/my/";
 apiKey = "<dcc77e6d87e3405782d191851222904>";
 
-
-  constructor(private http: HttpClient) {}
-
-public fetchLocationData(latlong)
-
+  constructor() {}
 }

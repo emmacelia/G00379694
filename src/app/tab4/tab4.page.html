@@ -6,15 +6,17 @@
   </ion-toolbar>
 </ion-header>
 
-
+<!-- if there is weather data-->
 <div *ngIf="WeatherData != undefined">  
 
+  <!-- image display -->
   <ion-img src="assets/img/wg.jpg"> </ion-img>
   <ion-list>
 
 
     <ion-item>
     <div>
+      <!-- Displays the api info -->
        <h2>>  Forcast  :  {{WeatherData.weather[0].main}} </h2> 
      </div>
     </ion-item>
@@ -22,16 +24,19 @@
 
     <ion-item>
  <div>
+    <!-- Displays the api info -->
     <h2> > Base   :    {{WeatherData.base}}</h2>  
   </div>
     </ion-item>
 <div>
+   <!-- Displays the api info -->
     <h2>> Temperature :{{WeatherData.main.temp}} </h2>
       
   </div>
 
     <ion-item>
       <div>
+         <!-- Displays the api info -->
         <h2> > Wind Speed  :   {{WeatherData.wind.speed}}</h2>
            
        </div>

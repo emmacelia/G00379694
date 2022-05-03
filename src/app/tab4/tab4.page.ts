@@ -13,12 +13,15 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class Tab4Page implements OnInit {
 
+  //allows us to use the Service
   constructor(private service: ServicesService) { }
 
   WeatherData: any;
 
+  //when the weather page is opened the following happens 
   ngOnInit() {
     
+    //calls the getweatherdata method 
     this.service.GetWeatherData().subscribe(data => {
       console.log(data);
       this.WeatherData = data;

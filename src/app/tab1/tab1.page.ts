@@ -14,18 +14,20 @@ SwiperCore.use([Autoplay, Keyboard, Pagination, Scrollbar, Zoom]);
 })
 export class Tab1Page {
 
+  //we put this in the constructor to use the in app browser
   constructor(private iab : InAppBrowser) {}
 
+  //the following are methods used to access the websites
   openHard(){
-    this.iab.create('https://www.thehardiman.ie/?msclkid=1bec960680b91d22bf7ef477a7c7ac58'); // --> Change URL here
+    this.iab.create('https://www.thehardiman.ie/?msclkid=1bec960680b91d22bf7ef477a7c7ac58'); 
 
 }
 OpenEyre(){
-  this.iab.create('https://www.eyresquarehotel.com/'); // --> Change URL here
+  this.iab.create('https://www.eyresquarehotel.com/'); 
 }
 
 OpenG(){
-  this.iab.create('https://www.thegalmont.com/en/'); // --> Change URL here
+  this.iab.create('https://www.thegalmont.com/en/'); 
 
 }
 
